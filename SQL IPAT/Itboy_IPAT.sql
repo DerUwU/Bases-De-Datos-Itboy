@@ -1,0 +1,176 @@
+-- Table: LesionesANSV
+CREATE TABLE LesionesANSV (
+    IDENTIFICADOR_DEL_CASO int  NOT NULL,
+    TIPO_DE_DOCUMENTO_DE_IDENTIFICACION_DE_LA_VICTIMA varchar(30)  NULL,
+    DOCUMENTO_DE_IDENTIFICACION_DE_LA_PERSONA varchar(20)  NULL,
+    NUMERO_DE_NOTICIA_DE_REFERENCA varchar(30)  NOT NULL,
+    NUMERO_DE_RADICADO varchar(30)  NOT NULL,
+    MUNICIPIO_RADICADO varchar(30)  NOT NULL,
+    DEPARTAMENTO_RADICADO varchar(30)  NOT NULL,
+    FECHA_RADICACION date  NOT NULL,
+    EDAD decimal(3,2)  NULL,
+    SEXO varchar(15)  NULL,
+    ESTADO_CIVIL varchar(30)  NULL,
+    ESCOLARIDAD varchar(50)  NULL,
+    ESCOLARIDAD_AJUSTADA varchar(50)  NULL,
+    OCUPACION varchar(50)  NULL,
+    GRUPO_VULNE varchar(100)  NULL,
+    FECHA_HECHO date  NULL,
+    HORA_HECHO time  NULL,
+    HH_ENTRE varchar(20)  NULL,
+    MUNICIPIO_HECHO varchar(30)  NULL,
+    CODIGO_DIVIPOLA int  NULL,
+    DEPARTAMENTO_HECHO varchar(30)  NULL,
+    BARRIO_HECHO varchar(100)  NULL,
+    DIRECCION_HECHO varchar(200)  NULL,
+    ZONA_HECHO varchar(100)  NULL,
+    ESCENARIO_HECHO varchar(100)  NULL,
+    ACTIVIDAD_HECHO varchar(100)  NULL,
+    CIRCUNSTANCIA varchar(50)  NULL,
+    CONTEXTO varchar(30)  NOT NULL,
+    DIAGNOSTICO_TOPOGRAFICO varchar(150)  NULL,
+    CONDICION_VICTIMA varchar(20)  NULL,
+    VEHICULO_1 varchar(60)  NULL,
+    SERVICIO_VEHI1 varchar(30)  NULL,
+    CLASE_ACC varchar(50)  NULL,
+    OBJETO_COLISION varchar(60)  NULL,
+    SERV_OBJETO varchar(30)  NULL,
+    TIPO_DE_INCAPACIDAD varchar(50)  NULL,
+    INCAPACIDAD_DIAS int  NULL,
+    SECUEL1 varchar(50)  NULL,
+    SECUEL2 varchar(50)  NULL,
+    SECUEL3 varchar(50)  NULL,
+    CONSTRAINT LesionesANSV_pk PRIMARY KEY (IDENTIFICADOR_DEL_CASO)
+);
+
+-- Table: LesionesIPAT
+CREATE TABLE LesionesIPAT (
+    FECHA_HECHO date  NOT NULL,
+    MES varchar(3)  NOT NULL,
+    MUNICIPIO_HECHO varchar(30)  NOT NULL,
+    DIA_SEMANA varchar(10)  NOT NULL,
+    MODALIDAD varchar(60)  NOT NULL,
+    ZONA varchar(10)  NOT NULL,
+    DIRECCION_HECHO varchar(50)  NOT NULL,
+    RUTA_HECHO varchar(150)  NULL,
+    OBSERVACION_DIRECCION varchar(150)  NULL,
+    EDAD int  NOT NULL,
+    HIPOTESIS_HECHOS_ACCI varchar(100)  NULL,
+    HORA_HECHO varchar(5)  NOT NULL,
+    MOVIL_AGRESOR varchar(50)  NOT NULL,
+    MOVIL_VICTIMA varchar(50)  NOT NULL,
+    SERVICIO_VEHICULO varchar(50)  NULL,
+    CLASE_BIEN varchar(20)  NULL,
+    HECHOS_ID int  NOT NULL,
+    RANGO varchar(10)  NOT NULL,
+    CONSTRAINT LesionesIPAT_pk PRIMARY KEY (HECHOS_ID)
+);
+
+-- Table: MuertosANSV
+CREATE TABLE MuertosANSV (
+    IDENTIFICADOR_DEL_CASO int  NOT NULL,
+    TIPO_DE_DOCUMENTO_DE_IDENTIFICACION_DE_LA_VICTIMA varchar(30)  NULL,
+    DOCUMENTO_DE_IDENTIFICACION_DE_LA_PERSONA varchar(20)  NULL,
+    NUMERO_UNICO_DE_NOTICIA_CRIMINAL_O_ACTA_DE_INSPECCION varchar(30)  NOT NULL,
+    NUMERO_DE_PROTOCOLO varchar(30)  NOT NULL,
+    MUNICIPIO_NECROPSIA varchar(30)  NOT NULL,
+    DEPARTAMENTO_NECROPSIA varchar(30)  NOT NULL,
+    FECHA_NECROPSIA date  NOT NULL,
+    EDAD decimal(3,2)  NULL,
+    SEXO varchar(15)  NULL,
+    ESTADO_CIVIL varchar(30)  NULL,
+    ESCOLARIDAD varchar(50)  NULL,
+    ESCOLARIDAD_AJUSTADA varchar(50)  NULL,
+    OCUPACION varchar(50)  NULL,
+    GRUPO_VULNE varchar(100)  NULL,
+    FECHA_HECHO date  NULL,
+    HORA_HECHO time  NULL,
+    HH_ENTRE varchar(20)  NULL,
+    ESCENA varchar(20)  NULL,
+    MUNICIPIO_HECHO varchar(30)  NULL,
+    CODIGO_DIVIPOLA int  NULL,
+    DEPARTAMENTO_HECHO varchar(30)  NULL,
+    BARRIO_HECHO varchar(100)  NULL,
+    DIRECCION_HECHO varchar(200)  NULL,
+    ZONA_HECHO varchar(100)  NULL,
+    ESCENARIO_HECHO varchar(100)  NULL,
+    ACTIVIDAD_HECHO varchar(100)  NULL,
+    CIRCUNSTANCIA varchar(50)  NULL,
+    MANERAMUERTE varchar(30)  NOT NULL,
+    CAUSAMUERTE varchar(30)  NULL,
+    DIAGNOSTICO_TOPOGRAFICO varchar(150)  NULL,
+    CONDICION_VICTIMA varchar(20)  NULL,
+    VEHICULO_1 varchar(60)  NULL,
+    SERVICIO_VEHI1 varchar(30)  NULL,
+    CLASE_ACC varchar(50)  NULL,
+    OBJETO varchar(60)  NULL,
+    SERV_OBJETO varchar(30)  NULL,
+    CONDICIONLUGAR varchar(30)  NULL,
+    ESTADOVIA varchar(30)  NULL,
+    FECHAMUERTE date  NULL,
+    LOCALIDAD varchar(20)  NULL,
+    SECONOCEFECHAHECHO varchar(10)  NULL,
+    CERTIFICADO_DEFUNCION varchar(20)  NULL,
+    CONSTRAINT MuertosANSV_pk PRIMARY KEY (IDENTIFICADOR_DEL_CASO)
+);
+
+-- Table: MuertosIPAT
+CREATE TABLE MuertosIPAT (
+    FECHA_HECHO date  NOT NULL,
+    MES varchar(3)  NOT NULL,
+    MUNICIPIO_HECHO varchar(30)  NOT NULL,
+    DIA_SEMANA varchar(10)  NOT NULL,
+    MODALIDAD varchar(60)  NOT NULL,
+    ZONA varchar(10)  NOT NULL,
+    DIRECCION_HECHO varchar(50)  NOT NULL,
+    RUTA_HECHO varchar(150)  NULL,
+    OBSERVACION_DIRECCION varchar(150)  NULL,
+    EDAD int  NOT NULL,
+    HIPOTESIS_HECHOS_ACCI varchar(100)  NULL,
+    HORA_HECHO varchar(5)  NOT NULL,
+    MOVIL_AGRESOR varchar(50)  NOT NULL,
+    MOVIL_VICTIMA varchar(50)  NOT NULL,
+    SERVICIO_VEHICULO varchar(50)  NULL,
+    CLASE_BIEN varchar(20)  NULL,
+    HECHOS_ID int  NOT NULL,
+    RANGO varchar(10)  NOT NULL,
+    CONSTRAINT MuertosIPAT_pk PRIMARY KEY (HECHOS_ID)
+);
+
+-- sequences
+-- Sequence: LesionesANSV_seq
+CREATE SEQUENCE LesionesANSV_seq
+      INCREMENT BY 1
+      NO MINVALUE
+      NO MAXVALUE
+      START WITH 1
+      NO CYCLE
+;
+
+-- Sequence: LesionesIPAT_seq
+CREATE SEQUENCE LesionesIPAT_seq
+      INCREMENT BY 1
+      NO MINVALUE
+      NO MAXVALUE
+      START WITH 1
+      NO CYCLE
+;
+
+-- Sequence: MuertosANSV_seq
+CREATE SEQUENCE MuertosANSV_seq
+      INCREMENT BY 1
+      NO MINVALUE
+      NO MAXVALUE
+      START WITH 1
+      NO CYCLE
+;
+
+-- Sequence: MuertosIPAT_seq
+CREATE SEQUENCE MuertosIPAT_seq
+      INCREMENT BY 1
+      NO MINVALUE
+      NO MAXVALUE
+      START WITH 1
+      NO CYCLE
+;
+
